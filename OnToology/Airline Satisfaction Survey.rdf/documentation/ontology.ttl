@@ -1,0 +1,465 @@
+@prefix : <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey#> .
+
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey> rdf:type owl:Ontology ;
+                                                               owl:versionInfo "V1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed> rdf:type owl:ObjectProperty ;
+                                                                           owl:inverseOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsedOn> ;
+                                                                           rdfs:domain <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> ;
+                                                                           rdfs:range <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> ;
+                                                                           rdfs:comment "Aircraft used on the evaluated flight" ;
+                                                                           rdfs:label "AircraftUsed" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsedOn
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsedOn> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:comment "Flights where this plane model has been used." ;
+                                                                             rdfs:label "AircraftUsedOn" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                      rdf:type owl:FunctionalProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> ;
+                                                                      rdfs:range <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> ;
+                                                                      rdfs:comment "Departure's city" ;
+                                                                      rdfs:label "From" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                    rdf:type owl:FunctionalProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> ;
+                                                                    rdfs:range <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> ;
+                                                                    rdfs:comment "Arrival's city" ;
+                                                                    rdfs:label "To" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                             rdf:type owl:FunctionalProperty ;
+                                                                             rdfs:domain <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ;
+                                                                             rdfs:range <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> ;
+                                                                             rdfs:comment "Traveller's nationality" ;
+                                                                             rdfs:label "Nationality" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary> rdf:type owl:DatatypeProperty ,
+                                                                                  owl:FunctionalProperty ;
+                                                                         rdfs:domain <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ;
+                                                                         rdfs:range xsd:string ;
+                                                                         rdfs:comment "Description of the evaluation" ;
+                                                                         rdfs:label "Comment" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate> rdf:type owl:DatatypeProperty ,
+                                                                               owl:FunctionalProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ;
+                                                                      rdfs:range xsd:dateTime ;
+                                                                      rdfs:comment "Survey's date" ;
+                                                                      rdfs:label "Date" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                                        rdf:type owl:FunctionalProperty ;
+                                                                        rdfs:domain <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ;
+                                                                        rdfs:range [ rdf:type rdfs:Datatype ;
+                                                                                     owl:onDatatype xsd:integer ;
+                                                                                     owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                                                            ]
+                                                                                                            [ xsd:maxInclusive 10
+                                                                                                            ]
+                                                                                                          )
+                                                                                   ] ;
+                                                                        rdfs:comment "Survey's rate" ;
+                                                                        rdfs:label "Rate" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> rdf:type owl:Class ;
+                                                                     owl:disjointWith <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> ,
+                                                                                      <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> ,
+                                                                                      <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> ;
+                                                                     rdfs:comment "Categorization of survey results" ;
+                                                                     rdfs:label "Result" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airbus
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airbus> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> ;
+                                                                     owl:disjointWith <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing> ;
+                                                                     rdfs:comment "Airbus developed airplanes" ;
+                                                                     rdfs:label "Airbus" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> rdf:type owl:Class ;
+                                                                       owl:disjointWith <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> ,
+                                                                                        <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> ,
+                                                                                        <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> ,
+                                                                                        <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> ,
+                                                                                        <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> ,
+                                                                                        <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ,
+                                                                                        <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> ;
+                                                                       rdfs:comment "Airplane used in flight" ;
+                                                                       rdfs:label "Aircraft" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> rdf:type owl:Class ;
+                                                                      owl:disjointWith <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> ,
+                                                                                       <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> ;
+                                                                      rdfs:comment "Airline company" ;
+                                                                      rdfs:label "Airline" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> ;
+                                                                     rdfs:comment "Boeing developed airplanes" ;
+                                                                     rdfs:label "Boeing" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> ;
+                                                                       rdfs:comment "A busines traveler type" ;
+                                                                       rdfs:label "Busines" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> ;
+                                                                            rdfs:comment "A busines class seat" ;
+                                                                            rdfs:label "BusinesClass" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> rdf:type owl:Class ;
+                                                                   owl:disjointWith <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> ,
+                                                                                    <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> ,
+                                                                                    <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> ,
+                                                                                    <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ,
+                                                                                    <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> ;
+                                                                   rdfs:comment "Departures and arrivals locations" ;
+                                                                   rdfs:label "City" ;
+                                                                   rdfs:sameAs "https://dbpedia.org/ontology/city" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> rdf:type owl:Class ;
+                                                                      owl:disjointWith <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> ,
+                                                                                       <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> ,
+                                                                                       <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ,
+                                                                                       <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> ;
+                                                                      rdfs:comment "Traveller's nationality" ;
+                                                                      rdfs:label "Country" ;
+                                                                      rdfs:sameAs "https://dbpedia.org/ontology/country" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> ;
+                                                                            rdfs:comment "A couple leisure traveller type" ;
+                                                                            rdfs:label "CoupleLeisure" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> ;
+                                                                           rdfs:comment "A economy class seat" ;
+                                                                           rdfs:label "EconomyClass" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> ;
+                                                                        rdfs:comment "Excellence has been achieved" ;
+                                                                        rdfs:label "Excellent" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> ;
+                                                                     rdfs:comment "Minimum quality has not been achieved" ;
+                                                                     rdfs:label "Failed" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> ;
+                                                                            rdfs:comment "A family leisure traveller type" ;
+                                                                            rdfs:label "FamilyLeisure" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> ;
+                                                                         rdfs:comment "A first class seat" ;
+                                                                         rdfs:label "FirstClass" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> rdf:type owl:Class ;
+                                                                     rdfs:comment "The flight that has been evaluated" ;
+                                                                     rdfs:label "Flight" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> ;
+                                                                      rdfs:comment "Improvement is needed to achieve excellence" ;
+                                                                      rdfs:label "NeedToImprove" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> ;
+                                                                             rdfs:comment "A premium economy seat" ;
+                                                                             rdfs:label "PremiumEconomy" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/qatarAirways
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/qatarAirways> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> ;
+                                                                           owl:disjointWith <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair> ;
+                                                                           rdfs:comment "Qatar Airways is an airline based in Doha." ;
+                                                                           rdfs:label "QatarAirways" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> ;
+                                                                      rdfs:comment "Ryanair is an Irish low-cost airline." ;
+                                                                      rdfs:label "Ryanair" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> rdf:type owl:Class ;
+                                                                   rdfs:comment "The seat type at the plane" ;
+                                                                   rdfs:label "Seat" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> ;
+                                                                          rdfs:comment "A solo leisure traveller type" ;
+                                                                          rdfs:label "SoloLeisure" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> rdf:type owl:Class ;
+                                                                     rdfs:comment "A customer survey about flight satisfaction." ;
+                                                                     rdfs:label "Survey" .
+
+
+###  http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> rdf:type owl:Class ;
+                                                                        rdfs:comment "The traveller type" ;
+                                                                        rdfs:label "Traveller" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business>
+                <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure>
+                <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure>
+                <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass>
+                <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass>
+                <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass>
+                <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent>
+                <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed>
+                <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve>
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/o> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/w> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#o> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#w> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/o>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/o> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/w>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/w> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 9 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/w> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 5 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#w>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#w> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#w>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#w> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 9 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

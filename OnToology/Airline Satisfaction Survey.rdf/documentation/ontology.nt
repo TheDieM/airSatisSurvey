@@ -1,0 +1,466 @@
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey> <http://www.w3.org/2002/07/owl#versionInfo> "V1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsedOn> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed> <http://www.w3.org/2000/01/rdf-schema#comment> "Aircraft used on the evaluated flight" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed> <http://www.w3.org/2000/01/rdf-schema#label> "AircraftUsed" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsedOn
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Flights where this plane model has been used." .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsedOn> <http://www.w3.org/2000/01/rdf-schema#label> "AircraftUsedOn" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Departure's city" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom> <http://www.w3.org/2000/01/rdf-schema#label> "From" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Arrival's city" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo> <http://www.w3.org/2000/01/rdf-schema#label> "To" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller's nationality" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality> <http://www.w3.org/2000/01/rdf-schema#label> "Nationality" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the evaluation" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary> <http://www.w3.org/2000/01/rdf-schema#label> "Comment" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Survey's date" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate> <http://www.w3.org/2000/01/rdf-schema#label> "Date" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2001/XMLSchema#maxInclusive> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Survey's rate" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "Rate" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> <http://www.w3.org/2000/01/rdf-schema#comment> "Categorization of survey results" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> <http://www.w3.org/2000/01/rdf-schema#label> "Result" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airbus
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airbus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airbus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airbus> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airbus> <http://www.w3.org/2000/01/rdf-schema#comment> "Airbus developed airplanes" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airbus> <http://www.w3.org/2000/01/rdf-schema#label> "Airbus" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/2000/01/rdf-schema#comment> "Airplane used in flight" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> <http://www.w3.org/2000/01/rdf-schema#label> "Aircraft" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> <http://www.w3.org/2000/01/rdf-schema#comment> "Airline company" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> <http://www.w3.org/2000/01/rdf-schema#label> "Airline" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing> <http://www.w3.org/2000/01/rdf-schema#comment> "Boeing developed airplanes" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing> <http://www.w3.org/2000/01/rdf-schema#label> "Boeing" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business> <http://www.w3.org/2000/01/rdf-schema#comment> "A busines traveler type" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business> <http://www.w3.org/2000/01/rdf-schema#label> "Busines" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass> <http://www.w3.org/2000/01/rdf-schema#comment> "A busines class seat" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass> <http://www.w3.org/2000/01/rdf-schema#label> "BusinesClass" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> <http://www.w3.org/2000/01/rdf-schema#comment> "Departures and arrivals locations" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/city" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> <http://www.w3.org/2000/01/rdf-schema#comment> "Traveller's nationality" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/country" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "A couple leisure traveller type" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure> <http://www.w3.org/2000/01/rdf-schema#label> "CoupleLeisure" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass> <http://www.w3.org/2000/01/rdf-schema#comment> "A economy class seat" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass> <http://www.w3.org/2000/01/rdf-schema#label> "EconomyClass" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent> <http://www.w3.org/2000/01/rdf-schema#comment> "Excellence has been achieved" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent> <http://www.w3.org/2000/01/rdf-schema#label> "Excellent" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum quality has not been achieved" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed> <http://www.w3.org/2000/01/rdf-schema#label> "Failed" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "A family leisure traveller type" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure> <http://www.w3.org/2000/01/rdf-schema#label> "FamilyLeisure" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass> <http://www.w3.org/2000/01/rdf-schema#comment> "A first class seat" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass> <http://www.w3.org/2000/01/rdf-schema#label> "FirstClass" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> <http://www.w3.org/2000/01/rdf-schema#comment> "The flight that has been evaluated" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight> <http://www.w3.org/2000/01/rdf-schema#label> "Flight" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve> <http://www.w3.org/2000/01/rdf-schema#comment> "Improvement is needed to achieve excellence" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve> <http://www.w3.org/2000/01/rdf-schema#label> "NeedToImprove" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy> <http://www.w3.org/2000/01/rdf-schema#comment> "A premium economy seat" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy> <http://www.w3.org/2000/01/rdf-schema#label> "PremiumEconomy" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/qatarAirways
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/qatarAirways> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/qatarAirways> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/qatarAirways> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/qatarAirways> <http://www.w3.org/2000/01/rdf-schema#comment> "Qatar Airways is an airline based in Doha." .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/qatarAirways> <http://www.w3.org/2000/01/rdf-schema#label> "QatarAirways" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair> <http://www.w3.org/2000/01/rdf-schema#comment> "Ryanair is an Irish low-cost airline." .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair> <http://www.w3.org/2000/01/rdf-schema#label> "Ryanair" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> <http://www.w3.org/2000/01/rdf-schema#comment> "The seat type at the plane" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat> <http://www.w3.org/2000/01/rdf-schema#label> "Seat" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure> <http://www.w3.org/2000/01/rdf-schema#comment> "A solo leisure traveller type" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure> <http://www.w3.org/2000/01/rdf-schema#label> "SoloLeisure" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> <http://www.w3.org/2000/01/rdf-schema#comment> "A customer survey about flight satisfaction." .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> <http://www.w3.org/2000/01/rdf-schema#label> "Survey" .
+# 
+# http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> <http://www.w3.org/2000/01/rdf-schema#comment> "The traveller type" .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller> <http://www.w3.org/2000/01/rdf-schema#label> "Traveller" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid6 <http://www.w3.org/2002/07/owl#members> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid11 <http://www.w3.org/2002/07/owl#members> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid16 <http://www.w3.org/2002/07/owl#members> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/o> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/w> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#o> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#w> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid20 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid20 <http://www.w3.org/2003/11/swrl#body> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2003/11/swrl#arguments> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/w> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
+<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2003/11/swrl#arguments> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/w> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> .
+<http://www.w3.org/2003/11/swrlb#lessThanOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/w> .
+_:genid30 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/o> .
+_:genid30 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/o> .
+_:genid32 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid20 <http://www.w3.org/2003/11/swrl#head> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
+_:genid34 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/o> .
+_:genid34 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid35 <http://www.w3.org/2003/11/swrl#body> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
+_:genid37 <http://www.w3.org/2003/11/swrl#arguments> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#w> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+<http://www.w3.org/2003/11/swrlb#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid41 .
+_:genid41 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#w> .
+_:genid41 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid41 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
+_:genid43 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid43 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid35 <http://www.w3.org/2003/11/swrl#head> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid45 .
+_:genid45 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid45 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid46 <http://www.w3.org/2003/11/swrl#body> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid48 .
+_:genid48 <http://www.w3.org/2003/11/swrl#arguments> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#w> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+<http://www.w3.org/2003/11/swrlb#greaterThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid52 .
+_:genid52 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#w> .
+_:genid52 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid52 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid54 .
+_:genid54 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid54 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid46 <http://www.w3.org/2003/11/swrl#head> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid56 .
+_:genid56 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#o> .
+_:genid56 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

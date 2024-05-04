@@ -1,0 +1,129 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "hasRating" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasRating"
+    },
+    "flyFrom" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyFrom",
+      "@type" : "@id"
+    },
+    "excellent" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/excellent"
+    },
+    "country" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/country"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "city" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/city"
+    },
+    "commentary" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/commentary",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "flight" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flight"
+    },
+    "airbus" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airbus"
+    },
+    "failed" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/failed"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "aircraftUsed" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsed",
+      "@type" : "@id"
+    },
+    "Result" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/Result"
+    },
+    "ryanair" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/ryanair"
+    },
+    "hasDate" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "airline" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/airline"
+    },
+    "hasNationality" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/hasNationality",
+      "@type" : "@id"
+    },
+    "business" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/business"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "improve" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/improve"
+    },
+    "soloLeisure" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/soloLeisure"
+    },
+    "aircraftUsedOn" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraftUsedOn",
+      "@type" : "@id"
+    },
+    "flyTo" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/flyTo",
+      "@type" : "@id"
+    },
+    "businessClass" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/businessClass"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "coupleLeisure" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/coupleLeisure"
+    },
+    "survey" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/survey"
+    },
+    "aircraft" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/aircraft"
+    },
+    "traveller" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/traveller"
+    },
+    "firstClass" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/firstClass"
+    },
+    "economyClass" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/economyClass"
+    },
+    "seat" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/seat"
+    },
+    "familyLeisure" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/familyLeisure"
+    },
+    "premiumEconomy" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/premiumEconomy"
+    },
+    "qatarAirways" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/qatarAirways"
+    },
+    "boeing" : {
+      "@id" : "http://www.semanticweb.org/adrian/airlineSatisfactionSurvey/boeing"
+    }
+  }
+}
